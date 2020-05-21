@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Hash;
 
 public class Person {
     private String name;

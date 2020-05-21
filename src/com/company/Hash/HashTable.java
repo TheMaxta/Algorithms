@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Hash;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +21,7 @@ public class HashTable {
     }
 
     public String findKey(String key){
-       // we need to run the same calculation (key % 29 to get the original val)
+        // we need to run the same calculation (key % 29 to get the original val)
         int arrayIndexHash = Integer.parseInt(key)%arraySize;  //convert to int and get modulo of 29, the same calculatio from setting the index
         //important to note, we also used linear probing to place our vals, so we can use it again here. This will effect computational time, as linear probing is O(n)
         while (theArray[arrayIndexHash] != "-1"){

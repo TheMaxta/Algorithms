@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Hash;
 
 class WordList {
     public HashFunction3.Word firstWord = null;
