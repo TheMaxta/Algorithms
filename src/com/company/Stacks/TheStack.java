@@ -7,7 +7,7 @@ public class TheStack {
     private String[] stackArray;
 
     //This will help us monitor the size
-    private int stackSize;
+    public int stackSize;
 
     //This will help us monitor the last in first out
     //-1 let's us know it is empty
@@ -86,16 +86,19 @@ public class TheStack {
             newArray[i] = stackArray[i];
         }
         stackArray = newArray; //replace old array with new longer array
+        stackSize = doubleSize;
     }
     public void doubleByPrime(){
         int doubleSize = stackSize * 2;
         int primeSize = getNextPrime(doubleSize);
         String[] newArray = new String[primeSize];
+        Arrays.fill(newArray,"-1");
         for (int i = 0; i < stackArray.length; i++) {
             newArray[i] = stackArray[i];
         }
         //replace old array with new prime array
         stackArray = newArray;
+        stackSize = primeSize;
     }
 
     public boolean isPrime(int num){
@@ -131,11 +134,11 @@ public class TheStack {
 
         System.out.println();
 
-        for(int n = 0; n < stackSize; n++){
+        for(int n = 0; n < stackArray.length; n++){
 
 
 
-            if(stackArray[n].equals("-1")) System.out.print("|     ");
+            if(stackArray[n].equals("-1"))System.out.print("|     ");
 
             else System.out.print(String.format("| %2s "+ " ", stackArray[n]));
 

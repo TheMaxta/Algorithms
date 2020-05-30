@@ -14,10 +14,13 @@ public class Main {
         stack.push("World");
         stack.displayTheStack();
         stack.pop();
+        stack.doubleByPrime();
+        System.out.println(stack.stackSize);
 
         stack.pushMany("12 42 69 420 1337 1234");
 
         stack.displayTheStack();
+
 
 
     }
